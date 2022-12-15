@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,161 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+body {
+  
+  
+  background: #EAD7C7;
+
+} 
+
+/* @media only screen and (min-width: 500px) {
+  
+  
+  
+} */
+
+.title {
+  margin-top: 25px;
+  margin-left: 25px;
+  color: #157575;
+}
+
+.buttonHomePagesignUp {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  /* display: flex;
+  justify-content: space-evenly; */
+  
+}
+
+.buttonHomePagelogIn {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  /* display: flex;
+  justify-content: space-evenly; */
+  
+}
+
+
+
+.button1 {
+  color: #157575;
+  font-weight: 800px;
+  border: none;
+  background-color: unset;
+  font-size: 1.5em;
+  /* border: 1px solid #157575;
+  border-radius: 20px;*/
+  /* padding: 5px 20px;  */
+}
+
+.button2 {
+  color: #157575;
+  font-weight: 800px;
+  border: 1px solid #157575;
+  border-radius: 20px;
+  background-color: unset;
+  font-size: 1.5em;
+  padding: 5px 20px;
+}
+
+.button2:hover {
+  background-color: #FFEEDA;
+  color: #157575;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20vh;
+  
+}
+.label{
+color:#157575;
+font-size: 24px;
+}
+
+.input{
+  background: #FFEEDA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  border:none;
+  height: 30px;
+  padding: 10px;
+  width: 200px;
+
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.fas{
+  color: #157575;
+}
+
+.navbarIcons {
+  display: flex; 
+  align-items: center; 
+  width: 150px;
+  
+}
+
+.navBar{
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: #d6b0a7ad;
+  color: #157575;
+  padding: 10px 25px;
+  
+
+}
+
+.meditateimg{
+  width: 20vw;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.notebookimg{
+  width: 20vw;
+  
+}
+
+.imgHome:hover{
+  width: 20vw;
+  
+}
+
+.homeCards{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: #157575;
+  font-size: larger;
 }
