@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link} from "react-router-dom";
 import background from '../images/sign-up-log-in.png'
+import axios from "axios";
 
 const SignUpPage = () => {
 
@@ -16,6 +17,21 @@ const SignUpPage = () => {
         [e.target.name]: e.target.value
     });
 
+    //this will create the user and send it to the log in page 
+
+    const submitFunction = e =>{
+        e.preventDefault();
+        axios.post('http://localhost:4000/auth/signup', {
+            email: state.email,
+            password: state.password,
+            userName: state.userName
+        })
+        .then(axiosResponse => {
+            console.log(axiosResponse)
+            navigate('/login')
+        })
+        .catch(err => console.log(err))
+    }
 
 
     return (
@@ -25,9 +41,9 @@ const SignUpPage = () => {
             <Link to='/'>
             <p>Go back</p>
             </Link>
-            <form className="form">
+            <form className="form" onSubmit={submitFunction}>
             <label className="label">Email</label>
-            <input className="input" name="email" value={state.email} onChange={updateState} type="text" />
+            <input className="input" name="email" value={state.email} onChange={updateState} type="email" />
 
             <br/>
             <br />

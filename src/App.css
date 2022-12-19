@@ -45,11 +45,7 @@ body {
 
 } 
 
-/* @media only screen and (min-width: 500px) {
-  
-  
-  
-} */
+
 
 .title {
   margin-top: 25px;
@@ -75,7 +71,14 @@ body {
   
 }
 
-
+.buttonLogOut{
+  border: none;
+  background-color: unset;
+  color: #157575;
+  font-size: 1em;
+  padding: 0px;
+  margin: 0px;
+}
 
 .button1 {
   color: #157575;
@@ -102,6 +105,17 @@ body {
   background-color: #FFEEDA;
   color: #157575;
   border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button3{
+  color: #FFEEDA;
+  font-weight: 800px;
+  border-radius: 20px;
+  background-color: #157575;
+  border: none;
+  font-size: 1.5em;
+  padding: 5px 20px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -167,29 +181,186 @@ img.bg {
   background-color: #d6b0a7ad;
   color: #157575;
   padding: 10px 25px;
+  align-items: center;
   
 
 }
 
 .meditateimg{
-  width: 20vw;
+  width: 40vw;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .notebookimg{
-  width: 20vw;
+  width: 40vw;
   
 }
 
-.imgHome:hover{
-  width: 20vw;
+.meditateimg:hover{
+  transform: rotate(5deg);
   
 }
 
-.homeCards{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.notebookimg:hover{
+  transform: rotate(5deg);
+  
+}
+
+.homeCards {
   text-align: center;
   color: #157575;
   font-size: larger;
+  
+}
+
+.homeCardInside{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: larger;
+  padding: 10px;
+}
+
+
+
+
+.notesContainer {
+  border: 1px solid #157575;
+  padding: 10px;
+  width: fit-content;
+  margin-top: 80px;
+  margin-left: 40px;
+  border-radius: 50px;
+  display: none;
+
+}
+
+.notesContainerMobile{
+  padding: 10px;
+  width: fit-content;
+  margin-top: 80px;
+  margin-left: 40px;
+  border-radius: 50%;
+  background-color: #157575;
+  color:#FFEEDA;
+  box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttonposition{
+  position: fixed;
+  top: 400px;
+  right: 50px;
+  left:0px;
+}
+
+/* @media  screen and (min-width: 500px) and  (max-width: 1000px){
+  .buttonposition{
+    position: fixed;
+    top: 200px;
+    right: 50px;
+    
+  }
+
+
+} */
+
+
+
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #157575;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lotusimg{
+  width: 5vw;
+}
+
+
+.noteForm{
+  font-size: larger;
+  border: 1px solid #157575;
+  padding: 20px;
+}
+
+.noteForm input {
+  border: 1px solid #157575;
+  border-radius: 50px;
+  background-color: #EAD7C7;
+  padding: 10px;
+}
+
+.noteForm div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.noteForm textarea{
+  border: 2px solid #157575;
+  background-color: #EAD7C7;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 500px){
+  
+  .meditateimg{
+    width: 20vw;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .notebookimg{
+    width: 20vw;
+    
+  }
+
+  .homeCardInside{
+  display: flex;
+  flex-direction: column;
+  }
+
+  .homeCards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: #157575;
+    font-size: larger;
+  
+  }
+  
+  .lotusimg{
+    width: 5vw;
+  }
+
+  .notesContainer {
+    border: 1px solid #157575;
+    width: 400px;
+    height: 400px;
+    margin-left: 30px;
+    padding: 10px;
+   display: block;
+  
+  }
+
+ .notesContainerMobile{
+  display: none;
+ }
+ .buttonposition{
+    position: fixed;
+    top: 331px;
+    right: 460px;
+    left:500px;
+  }
+
+  .noteForm div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
 }
