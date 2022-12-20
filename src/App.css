@@ -228,32 +228,16 @@ img.bg {
   padding: 10px;
   width: fit-content;
   margin-top: 80px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   border-radius: 50px;
-  display: none;
-
-}
-
-.notesContainerMobile{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  width: 200px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  color:#157575;
-  padding: 10px;
-  box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  flex-wrap: wrap;
+
 }
 
-.buttonposition{
-  position: fixed;
-  top: 400px;
-  right: 50px;
-  left:0px;
-}
+
+
+
 
 /* @media  screen and (min-width: 500px) and  (max-width: 1000px){
   .buttonposition{
@@ -346,6 +330,24 @@ img.bg {
   padding: 10px;
 }
 
+.singleNote{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color:#157575;
+  
+
+}
+
+.singleNote:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+
+
+
+
 @media only screen and (min-width: 500px){
   
   .meditateimg{
@@ -379,16 +381,14 @@ img.bg {
   .notesContainer {
     border: 1px solid #157575;
     width: 400px;
-    height: 400px;
+    /* height: 400px; */
     margin-left: 30px;
     padding: 10px;
    display: block;
   
   }
 
- .notesContainerMobile{
-  display: none;
- }
+
  .buttonposition{
     position: fixed;
     top: 331px;

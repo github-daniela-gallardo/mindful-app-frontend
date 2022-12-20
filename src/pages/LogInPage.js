@@ -33,7 +33,7 @@ const LogInPage = () => {
             storeToken(axiosResponse.data.authToken);
             authenticateUser();
             navigate('/homeloggedin');
-            // this navigate is not taking me to the right place 
+            
 
         })
         .catch(err => console.log(err))

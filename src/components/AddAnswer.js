@@ -12,7 +12,7 @@ const AddAnswer = () => {
     const [questions, setQuestions] = useState([])
     const [answer, setAnswer] = useState([]);
    
-
+//this is a function that returns another function - what it does is update the state just for one answer at a time at it index position
     const updateAnswer = i => e => {
         const copy = [...answer];
         copy[i] = e.target.value;

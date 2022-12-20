@@ -52,8 +52,9 @@ const ProfilePage = () => {
                         <input value={state.password} onChange={updateState} name='password' type='password' />
 
                         <br />
+                        
                         <br />
-                        <button className='button3'>Update my info</button>
+                        <button className='button3'>Update my info  <i className="fas fa-user-edit" style={{color: "#EAD7C7"}}></i> </button>
                         <br/>
                         <br/>
                         <button className='button1' style={{textDecoration: "underline"}}>Delete my account</button>
@@ -67,10 +68,13 @@ const ProfilePage = () => {
                     <p style={{ textAlign: "center", fontSize: "smaller" }}>Here you can see your favorite videos</p>
                     <br/>
                     <br/>
+                    <i className="fab fa-gratipay"></i>
                     <br/>
                     <Link to='FavoriteVideos'>
                         <button style={{ fontSize: "smaller" }} className='button3'>See my favorites</button>
                     </Link>
+
+                    
                 </div>
             </div>
 

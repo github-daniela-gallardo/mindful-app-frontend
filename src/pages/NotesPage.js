@@ -1,16 +1,39 @@
-import React from 'react';
 import NavBar from '../components/NavBar';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import background from '../images/sign-up-log-in.png'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 
 const NotesPage = () => {
+
+    // const {userId} = useParams()
+
+    const [notes, setNotes] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://localhost:4000/addnote/notes`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('authToken')}`
+            }
+        }
+        )
+            .then(axiosRespoonse => {
+                console.log(axiosRespoonse.data)
+                setNotes(axiosRespoonse.data)
+            })
+            .catch(err => console.log(err))
+    }, [])
+
+
+
     return (
         <div>
             <img src={background} alt='bg' className="bg" />
             <NavBar />
+
             <h3 className='title' style={{ textAlign: "center" }}>Add notes to your journal</h3>
-            
+
             <div className='container'>
 
                 <Link to='/createnote'>
@@ -20,26 +43,37 @@ const NotesPage = () => {
 
                     </div>
                 </Link>
-                {/* <i className="fal fa-smile-plus"></i> */}
 
 
-
-                {/* this is for mobile first design  */}
-                <div className='notesContainerMobile'>
-                    <div>
-                        {/* <Link to='savedNotesMobile'>
-                    <p style={{ textAlign: "center", color: "#157575"}}>Check out your notes  </p> 
-                    </div>
-                    <div>
-                    <i className="far fa-sticky-note">  </i>
-                    </Link> */}
-                    </div>
-                </div>
-
-
-                {/* this is for screens greater that 500  */}
                 <div className='notesContainer'>
-                    <h5 style={{ textAlign: "center", color: "#157575", textDecoration: "underline"}} >Check out your notes: </h5>
+                    <h5 style={{ textAlign: "center", color: "#157575", textDecoration: "underline" }} >Check out your notes: </h5>
+
+                    <div >
+                        <Link to="editNote" style={{textDecoration: "none", color: "#157575"}}>
+                            {
+                                notes.map((singleNote) => {
+                                    return (
+                                        <div className='singleNote'>
+                                            <div>
+                                                <p>{singleNote.title}</p>
+
+                                            </div>
+
+
+                                            <div className='icons'>
+                                                {/* <div> */}
+                                                <p><i className="far fa-edit"></i></p>
+                                                {/* </div> */}
+                                                {/* <div>
+                                            <p><i className="fas fa-trash"></i></p>
+                                        </div> */}
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </Link>
+                    </div>
 
 
                 </div>
@@ -47,7 +81,7 @@ const NotesPage = () => {
             </div>
 
 
-        </div>
+        </div >
 
     );
 }
