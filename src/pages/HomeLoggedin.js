@@ -9,6 +9,8 @@ import background from '../images/sign-up-log-in.png'
 
 const HomeLoggedin = () => {
 
+    console.log('logged in')
+
     const [quote, setQuote] = useState('')
 
     // useEffect(() => {
