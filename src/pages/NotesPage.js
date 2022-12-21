@@ -97,7 +97,7 @@ const NotesPage = () => {
             </div>
 
 
-            {isOpen && <EditNoteModal noteId={noteId} />}.
+            {isOpen && <EditNoteModal noteId={noteId} setIsOpen={setIsOpen} setNotes={setNotes} notes={notes}/>}.
         </div >
 
     );

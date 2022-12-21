@@ -1,11 +1,26 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const EditNoteModal = (props) => {
 
+    const [questions, setQuestions] = useState([])
+    const [answer, setAnswer] = useState([]);
+
+    const { noteId } = useParams();
+
+
+
     const [note, setNote] = useState(null)
+
+    const updateSingleNote = (index) => (event) => {
+        const copyNote = JSON.parse(JSON.stringify(note));
+        copyNote.answers[index].answer = event.target.value;
+        setNote(copyNote);
+    }
+
+
 
     useEffect(() => {
         axios.get(`http://localhost:4000/addnote/notes/${props.noteId}`, {
@@ -20,6 +35,54 @@ const EditNoteModal = (props) => {
             .catch(err => console.log(err))
     }, [props.noteId]);
 
+    //this function updates the answers from the notes 
+
+    const submitEditedAnswer = e => {
+        e.preventDefault();
+        axios.put(`http://localhost:4000/addnote/update/${props.noteId}`, note
+            , {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('authToken')}`
+                }
+            }
+        )
+            .then(axiosResponse => {
+                props.setIsOpen(false)
+            })
+
+            .catch(err => console.log(err))
+    }
+
+
+    //this function deletes the note
+
+    const deleteFunction = e => {
+        e.preventDefault();
+        if (window.confirm("Are you sure you want to delete this note?") === true) {
+
+            axios.delete(`http://localhost:4000/addnote/notes/${props.noteId}`, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('authToken')}`
+                }
+            }
+            )
+                .then(axiosResponse => {
+                    console.log("This is the note we deleted", axiosResponse.data)
+                    props.setNotes(
+                        [...props.notes].filter(note => note._id !== axiosResponse.data._id)
+                    )
+                    props.setIsOpen(false)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+
+        } else {
+            return
+        }
+
+    }
+
 
     return (
 
@@ -30,28 +93,37 @@ const EditNoteModal = (props) => {
                 {note ? (
                     <div>
                         {/* this 'close button' is not closing the modal */}
-                         <Link to='/notes'><i className="fas fa-times-circle" style={{ fontSize: "30px" }}></i></Link>
+                        <i className="fas fa-times-circle" style={{ fontSize: "30px" }} onClick={() => props.setIsOpen(false)}></i>
+
+
                         <h3 style={{ textAlign: "center" }}>{note.title}</h3>
                         <h5>{(new Date(note.date)).toDateString()}</h5>
 
-                        {note.answers.map((thisAnswer) => {
+
+                        {note.answers.map((thisAnswer, i) => {
                             return (
                                 <div>
                                     <h4>{thisAnswer.question.text}</h4>
-                                    {thisAnswer.answer ? <p>{thisAnswer.answer}</p> : <p>No answer provided.</p>}
+                                    <textarea value={thisAnswer.answer} onChange={updateSingleNote(i)} ></textarea>
                                 </div>
 
                             )
                         })}
 
+                        <hr />
                         <div className='buttonsModal'>
-                            <button style={{ fontSize: 'small' }} className='button2'>Update<i className="fas fa-pencil"></i></button>
-                            <button style={{ fontSize: 'small' }} className='button2'>Delete <i className="fas fa-trash"></i></button>
+                            <button onClick={submitEditedAnswer} style={{ fontSize: 'small' }} className='button2'>Update<i className="fas fa-pencil"></i></button>
+                            <button onClick={deleteFunction} style={{ fontSize: 'small' }} className='button2'>Delete <i className="fas fa-trash"></i></button>
                         </div>
+
+
+
                     </div>
                 ) : (
                     <p>loading...</p>
                 )}
+
+
             </div>
         </div>
     );

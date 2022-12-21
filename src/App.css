@@ -432,15 +432,23 @@ img.bg {
   position: absolute;
   z-index: 20;
   width: 500px;
-  top: 60%;
+  top: 10%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  margin-top: 100px;
- 
-  
+  transform: translateX(-50%) 
+  /* translateY(-50%) */
+  ;
+  /* margin-top: 10vh */
+
 }
 
-.buttonsModal{
+.buttonsModal {
   display: flex;
   justify-content: space-between;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }

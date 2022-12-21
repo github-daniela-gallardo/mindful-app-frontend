@@ -33,7 +33,7 @@ function App() {
         <Route path='/addnote/:noteId' element={<IsPrivate><AddAnswer /></IsPrivate>} />
 
 
-        <Route parth='videos' element={<Videos />} />
+        <Route path='/videos' element={<IsPrivate><Videos /></IsPrivate>}/>
 
         <Route path='/savedNotesMobile' element={<IsPrivate><CheckSavedNotes /></IsPrivate>} />
 

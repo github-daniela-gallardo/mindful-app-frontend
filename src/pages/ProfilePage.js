@@ -137,14 +137,14 @@ const ProfilePage = () => {
                         <br />
                     </form>
 
-                    {/* this delete acocunt is not working yet  */}
+                    
 
                         <button  className='button1' style={{ textDecoration: "underline" , textAlign: "center" , fontSize: "small"}} onClick={deleteAccount}>Delete my account</button>
                 </div>
 
 
                 {/* this is for favorites videos */}
-                <div className='profileFavorite'>
+                {/* <div className='profileFavorite'>
                     <h5 style={{ textAlign: "center", color: " #157575" }}> My favorites </h5>
 
                     <p style={{ textAlign: "center", fontSize: "smaller" }}>Here you can see your favorite videos</p>
@@ -157,7 +157,9 @@ const ProfilePage = () => {
                     </Link>
 
 
-                </div>
+                </div> */}
+
+                
             </div>
 
         </div>
