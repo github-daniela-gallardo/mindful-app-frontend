@@ -33,12 +33,18 @@ const HomeLoggedin = () => {
 
 
             <div className='homeCards'>
+
+
+                <Link to='videos' style={{ textDecoration: "none", color: " #157575" }}>
                 <div className='homeCardInside'>
 
                     <img className="meditateimg" src={meditateimg} alt='meditateimg' />
                     <h4>Mediate now</h4>
 
                 </div>
+                </Link>
+
+
                 <br />
                 <br />
                 <Link style={{ textDecoration: "none", color: " #157575" }} to='/notes'>

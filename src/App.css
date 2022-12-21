@@ -39,11 +39,11 @@
 
 
 body {
-  
-  
+
+
   background: #EAD7C7;
 
-} 
+}
 
 
 
@@ -59,7 +59,7 @@ body {
   left: 10%;
   /* display: flex;
   justify-content: space-evenly; */
-  
+
 }
 
 .buttonHomePagelogIn {
@@ -68,10 +68,10 @@ body {
   left: 10%;
   /* display: flex;
   justify-content: space-evenly; */
-  
+
 }
 
-.buttonLogOut{
+.buttonLogOut {
   border: none;
   background-color: unset;
   color: #157575;
@@ -108,7 +108,7 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button3{
+.button3 {
   color: #FFEEDA;
   font-weight: 800px;
   border-radius: 20px;
@@ -130,18 +130,19 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 20vh;
-  
-}
-.label{
-color:#157575;
-font-size: 24px;
+
 }
 
-.input{
+.label {
+  color: #157575;
+  font-size: 24px;
+}
+
+.input {
   background: #FFEEDA;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 23px;
-  border:none;
+  border: none;
   height: 30px;
   padding: 10px;
   width: 200px;
@@ -164,55 +165,56 @@ img.bg {
   z-index: -1;
 }
 
-.fas{
+.fas {
   color: #157575;
 }
 
 .navbarIcons {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   width: 150px;
-  
+
 }
 
-.navBar{
+.navBar {
   display: flex;
   /* justify-content: space-between; */
   background-color: #d6b0a7ad;
   color: #157575;
   padding: 10px 25px;
   align-items: center;
-  
+
 
 }
 
-.meditateimg{
+.meditateimg {
   width: 40vw;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.notebookimg{
+
+.notebookimg {
   width: 40vw;
-  
+
 }
 
-.meditateimg:hover{
+.meditateimg:hover {
   transform: rotate(5deg);
-  
+
 }
 
-.notebookimg:hover{
+.notebookimg:hover {
   transform: rotate(5deg);
-  
+
 }
 
 .homeCards {
   text-align: center;
   color: #157575;
   font-size: larger;
-  
+
 }
 
-.homeCardInside{
+.homeCardInside {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -250,7 +252,7 @@ img.bg {
 
 } */
 
-.profileFavorite{
+.profileFavorite {
   font-size: 24px;
   border: 1px solid #157575;
   padding: 20px;
@@ -261,7 +263,7 @@ img.bg {
   text-align: center;
 }
 
-.profileSections{
+.profileSections {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -278,11 +280,11 @@ img.bg {
   margin-right: auto;
 }
 
-.lotusimg{
+.lotusimg {
   width: 5vw;
 }
 
-.profileForm{
+.profileForm {
   font-size: 24px;
   border: 1px solid #157575;
   padding: 20px;
@@ -290,22 +292,21 @@ img.bg {
   flex-direction: column;
   width: 300px;
   color: #157575
-
 }
 
-.profileForm input{
+.profileForm input {
   border: 1px solid #157575;
   /* border-radius: 50px; */
   background-color: #EAD7C7;
   padding: 10px;
 }
 
-.profileForm button{
+.profileForm button {
   font-size: smaller;
 }
 
 
-.noteForm{
+.noteForm {
   font-size: larger;
   border: 1px solid #157575;
   padding: 20px;
@@ -318,28 +319,28 @@ img.bg {
   padding: 10px;
 }
 
-.noteForm div{
+.noteForm div {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.noteForm textarea{
+.noteForm textarea {
   border: 2px solid #157575;
   background-color: #EAD7C7;
   padding: 10px;
 }
 
-.singleNote{
+.singleNote {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  color:#157575;
-  
+  color: #157575;
+
 
 }
 
-.singleNote:hover{
+.singleNote:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -348,33 +349,34 @@ img.bg {
 
 
 
-@media only screen and (min-width: 500px){
-  
-  .meditateimg{
+@media only screen and (min-width: 500px) {
+
+  .meditateimg {
     width: 20vw;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  .notebookimg{
+
+  .notebookimg {
     width: 20vw;
-    
+
   }
 
-  .homeCardInside{
-  display: flex;
-  flex-direction: column;
+  .homeCardInside {
+    display: flex;
+    flex-direction: column;
   }
 
-  .homeCards{
+  .homeCards {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
     color: #157575;
     font-size: larger;
-  
+
   }
-  
-  .lotusimg{
+
+  .lotusimg {
     width: 5vw;
   }
 
@@ -384,30 +386,61 @@ img.bg {
     /* height: 400px; */
     margin-left: 30px;
     padding: 10px;
-   display: block;
-  
+    display: block;
+
   }
 
 
- .buttonposition{
+  .buttonposition {
     position: fixed;
     top: 331px;
     right: 460px;
-    left:500px;
+    left: 500px;
   }
 
-  .noteForm div{
+  .noteForm div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
+
   }
-  .noteForm{
-  width: 550px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px;
+
+  .noteForm {
+    width: 550px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+  }
+
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.notesModal {
+  background-color: #EAD7C7;
+  color: #157575;
+  padding: 30px;
+  position: absolute;
+  z-index: 20;
+  width: 500px;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin-top: 100px;
+ 
+  
+}
+
+.buttonsModal{
+  display: flex;
+  justify-content: space-between;
 }

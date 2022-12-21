@@ -3,13 +3,26 @@ import { Link, useParams } from 'react-router-dom';
 import background from '../images/sign-up-log-in.png'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import EditNoteModal from '../components/EditNoteModal';
 
 
 const NotesPage = () => {
 
     // const {userId} = useParams()
 
+    // const [isOpen, setIsOpen] = useState(false);
+    // const openModal = () => {
+    //   setIsOpen(true);
+    // }
+
+    // const closeModal = () => {
+    //   setIsOpen(false);
+    // }
+
     const [notes, setNotes] = useState([])
+    const [isOpen, setIsOpen] = useState(false);
+    const [noteId, setNoteId] = useState(null);
+
 
     useEffect(() => {
         axios.get(`http://localhost:4000/addnote/notes`, {
@@ -24,6 +37,11 @@ const NotesPage = () => {
             })
             .catch(err => console.log(err))
     }, [])
+
+
+    //create a request to open the notes and update 
+
+
 
 
 
@@ -49,38 +67,37 @@ const NotesPage = () => {
                     <h5 style={{ textAlign: "center", color: "#157575", textDecoration: "underline" }} >Check out your notes: </h5>
 
                     <div >
-                        <Link to="editNote" style={{textDecoration: "none", color: "#157575"}}>
-                            {
-                                notes.map((singleNote) => {
-                                    return (
-                                        <div className='singleNote'>
-                                            <div>
-                                                <p>{singleNote.title}</p>
+                        {notes.map((singleNote) => {
+                            return (
 
-                                            </div>
+                                // click this and open a form showing the notes 
+                                <div className='singleNote' onClick={() => {
+                                    setNoteId(singleNote._id);
+                                    setIsOpen(true)
+                                }}>
+                                    <div>
+                                        <p>{singleNote.title}</p>
 
+                                    </div>
 
-                                            <div className='icons'>
-                                                {/* <div> */}
-                                                <p><i className="far fa-edit"></i></p>
-                                                {/* </div> */}
-                                                {/* <div>
-                                            <p><i className="fas fa-trash"></i></p>
-                                        </div> */}
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </Link>
+                                    <div className='icons'>
+                                        <p><i className="far fa-edit"></i></p>
+
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
 
 
                 </div>
 
+
+
             </div>
 
 
+            {isOpen && <EditNoteModal noteId={noteId} />}.
         </div >
 
     );

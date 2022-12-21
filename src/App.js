@@ -11,6 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import AddAnswer from './components/AddAnswer';
 import CreateNote from './components/CreateNote';
 import CheckSavedNotes from './components/CheckSavedNotes';
+import Videos from './pages/Videos'
 
 function App() {
   return (
@@ -18,24 +19,26 @@ function App() {
 
 
       <Routes>
-         
-     
-        
+
+
+
         <Route path="/" element={<Homepage />} />
         <Route path='/signup' element={<IsAnnon><SignUpPage /></IsAnnon>} />
         <Route path='/login' element={<IsAnnon><LogInPage /></IsAnnon>} />
-        <Route path='/homeloggedin' element={<IsPrivate><HomeLoggedin/></IsPrivate>} />
+        <Route path='/homeloggedin' element={<IsPrivate><HomeLoggedin /></IsPrivate>} />
 
 
-        <Route path='/notes' element={<IsPrivate><NotesPage/></IsPrivate>} />
-        <Route path='/createnote' element={<IsPrivate><CreateNote/></IsPrivate>} />
-        <Route path='/addnote/:noteId' element={<IsPrivate><AddAnswer/></IsPrivate>}/>
+        <Route path='/notes' element={<IsPrivate><NotesPage /></IsPrivate>} />
+        <Route path='/createnote' element={<IsPrivate><CreateNote /></IsPrivate>} />
+        <Route path='/addnote/:noteId' element={<IsPrivate><AddAnswer /></IsPrivate>} />
 
 
-        <Route path='/savedNotesMobile' element={<IsPrivate><CheckSavedNotes/></IsPrivate>} />
+        <Route parth='videos' element={<Videos />} />
+
+        <Route path='/savedNotesMobile' element={<IsPrivate><CheckSavedNotes /></IsPrivate>} />
 
 
-        <Route path='/profile' element={<IsPrivate><ProfilePage/></IsPrivate>}/>
+        <Route path='/profile' element={<IsPrivate><ProfilePage /></IsPrivate>} />
 
 
 
