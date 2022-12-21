@@ -187,6 +187,11 @@ img.bg {
 
 }
 
+.videoimg{
+  width: 20vw;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .meditateimg {
   width: 40vw;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -377,7 +382,7 @@ img.bg {
   }
 
   .lotusimg {
-    width: 5vw;
+    width: 3vw;
   }
 
   .notesContainer {
@@ -452,3 +457,4 @@ img.bg {
   align-items: center;
   justify-content: space-evenly;
 }
+

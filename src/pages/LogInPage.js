@@ -3,6 +3,7 @@ import background from '../images/sign-up-log-in.png';
 import { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/authContext";
+import { baseUrl } from "../service";
 
 
 const LogInPage = () => {
@@ -24,7 +25,8 @@ const LogInPage = () => {
 
     const submitFunction = e =>{
         e.preventDefault();
-        axios.post('http://localhost:4000/auth/login' , {
+      
+        axios.post(`${baseUrl}/auth/login` , {            
             email: state.email,
             password: state.password
         })

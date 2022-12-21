@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useNavigate , useParams} from "react-router-dom";
 import background from '../images/sign-up-log-in.png'
+import { baseUrl } from "../service";
 
 const AddAnswer = () => {
 
@@ -25,7 +26,7 @@ const AddAnswer = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://localhost:4000/addnote/answer', {
+        axios.post(`${baseUrl}/addnote/answer`, {
             answer,
             questions,
             noteId
@@ -46,7 +47,7 @@ const AddAnswer = () => {
 
     // request to show the questions 
     useEffect(() => {
-        axios.get(`http://localhost:4000/addnote/questions`, {
+        axios.get(`${baseUrl}/addnote/questions`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('authToken')}`
             }

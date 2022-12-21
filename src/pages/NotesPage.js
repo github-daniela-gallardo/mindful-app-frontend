@@ -4,6 +4,7 @@ import background from '../images/sign-up-log-in.png'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import EditNoteModal from '../components/EditNoteModal';
+import { baseUrl } from "../service";
 
 
 const NotesPage = () => {
@@ -25,7 +26,7 @@ const NotesPage = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/addnote/notes`, {
+        axios.get(`${baseUrl}/addnote/notes`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('authToken')}`
             }

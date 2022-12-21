@@ -24,7 +24,7 @@ const Videos = () => {
 
                 <Link to='https://www.youtube.com/watch?v=U9YKY7fdwyg'  style={{  color: " #157575" }}>
                     <div>
-                        <img className="meditateimg" src={dani} alt='meditate' />
+                        <img className="videoimg" src={dani} alt='meditate' />
                         <br/>
                         <h5>Meditation for beginner</h5>
                     </div>
@@ -32,18 +32,18 @@ const Videos = () => {
 
                 <Link   style={{  color: " #157575" }}>
                     <div>
-                        <img className="meditateimg" src={palosanto} alt='meditate' />
+                        <img className="videoimg" src={dani} alt='meditate' />
                         <br/>
-                        <h5>Meditation for beginner</h5>
+                        <h5>Advanced meditation</h5>
                     </div>
                 </Link>
 
 
                 <Link   style={{  color: " #157575" }}>
                     <div>
-                        <img className="meditateimg" src={palosanto} alt='meditate' />
+                        <img className="videoimg" src={dani} alt='meditate' />
                         <br/>
-                        <h5>Meditation for beginner</h5>
+                        <h5>5 minutes of meditation</h5>
                     </div>
                 </Link>
 

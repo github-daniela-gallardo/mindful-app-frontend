@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { baseUrl } from "../service";
 
 
 const EditNoteModal = (props) => {
@@ -23,7 +24,7 @@ const EditNoteModal = (props) => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/addnote/notes/${props.noteId}`, {
+        axios.get(`${baseUrl}/addnote/notes/${props.noteId}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('authToken')}`
             }
@@ -39,7 +40,7 @@ const EditNoteModal = (props) => {
 
     const submitEditedAnswer = e => {
         e.preventDefault();
-        axios.put(`http://localhost:4000/addnote/update/${props.noteId}`, note
+        axios.put(`${baseUrl}/addnote/update/${props.noteId}`, note
             , {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('authToken')}`
@@ -60,7 +61,7 @@ const EditNoteModal = (props) => {
         e.preventDefault();
         if (window.confirm("Are you sure you want to delete this note?") === true) {
 
-            axios.delete(`http://localhost:4000/addnote/notes/${props.noteId}`, {
+            axios.delete(`${baseUrl}/addnote/notes/${props.noteId}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('authToken')}`
                 }

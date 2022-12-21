@@ -6,6 +6,7 @@ import lotusimg from '../images/lotus1.png'
 import NavBar from '../components/NavBar';
 import { Link } from 'react-router-dom';
 import background from '../images/sign-up-log-in.png'
+import { baseUrl } from "../service";
 
 const HomeLoggedin = () => {
 
@@ -13,13 +14,13 @@ const HomeLoggedin = () => {
 
     const [quote, setQuote] = useState('')
 
-    // useEffect(() => {
-    //     axios.get('http://localhost:4000/quote')
-    //         .then(axiosResponse => {
-    //             setQuote(axiosResponse.data[0]);
-    //         })
-    //         .catch(err => console.log(err))
-    // }, [])
+    useEffect(() => {
+        axios.get(`${baseUrl}/quote`)
+            .then(axiosResponse => {
+                setQuote(axiosResponse.data[0]);
+            })
+            .catch(err => console.log(err))
+    }, [])
 
 
     return (
@@ -56,8 +57,8 @@ const HomeLoggedin = () => {
 
             </div>
 
-            <br />
-            <br />
+            <hr />
+        
 
             <div className='quote'>
                 <img className="lotusimg" src={lotusimg} alt='lotusimg' />

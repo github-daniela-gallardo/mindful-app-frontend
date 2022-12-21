@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
 import background from '../images/sign-up-log-in.png'
+import { baseUrl } from "../service";
 
 
 const CreateNote = () => {
@@ -27,7 +28,7 @@ const CreateNote = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://localhost:4000/addnote/createnote', {
+        axios.post(`${baseUrl}/addnote/createnote`, {
             title: title,
             date: date
 

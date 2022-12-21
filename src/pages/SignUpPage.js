@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link} from "react-router-dom";
 import background from '../images/sign-up-log-in.png'
 import axios from "axios";
+import { baseUrl } from "../service";
 
 const SignUpPage = () => {
 
@@ -21,7 +22,7 @@ const SignUpPage = () => {
 
     const submitFunction = e =>{
         e.preventDefault();
-        axios.post('http://localhost:4000/auth/signup', {
+        axios.post(`${baseUrl}/auth/signup`, {
             email: state.email,
             password: state.password,
             userName: state.userName

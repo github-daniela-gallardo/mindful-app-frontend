@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import background from '../images/sign-up-log-in.png'
 import { Link , useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import { baseUrl } from "../service";
 
 const ProfilePage = () => {
 
@@ -50,7 +51,7 @@ const ProfilePage = () => {
 
         console.log('this is the user id', user._id)
 
-        axios.put('http://localhost:4000/auth/user/update', {
+        axios.put(`${baseUrl}/auth/user/update`, {
             userName: updatedUser.userName,
             email: updatedUser.email,
             password: updatedUser.password
@@ -76,7 +77,7 @@ const ProfilePage = () => {
        console.log('button works!!!!')
        if (window.confirm("Are you sure you want to delete?") === true) {
            
-             axios.delete('http://localhost:4000/auth/user/delete',{
+             axios.delete(`${baseUrl}/auth/user/delete`,{
                  headers: {
                      authorization: `Bearer ${localStorage.getItem('authToken')}`
                  }
