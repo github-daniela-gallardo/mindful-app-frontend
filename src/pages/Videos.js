@@ -22,36 +22,46 @@ const Videos = () => {
 
             <div className='videos'>
 
-                <Link to='https://www.youtube.com/watch?v=U9YKY7fdwyg'  style={{  color: " #157575" }}>
-                    <div>
-                        <img className="videoimg" src={dani} alt='meditate' />
-                        <br/>
-                        <h5>Meditation for beginner</h5>
-                    </div>
-                </Link>
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>For beginners</h3>
+                    <br />
 
-                <Link   style={{  color: " #157575" }}>
-                    <div>
-                        <img className="videoimg" src={dani} alt='meditate' />
-                        <br/>
-                        <h5>Advanced meditation</h5>
-                    </div>
-                </Link>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/U9YKY7fdwyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>Do it anywhere</h3>
+                    <br />
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/inpok4MKVLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
-                <Link   style={{  color: " #157575" }}>
-                    <div>
-                        <img className="videoimg" src={dani} alt='meditate' />
-                        <br/>
-                        <h5>5 minutes of meditation</h5>
-                    </div>
-                </Link>
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>For anxiety</h3>
+                    <br />
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/O-6f5wQXSu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
 
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>Before going to sleep</h3>
+                    <br />
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aEqlQvczMJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
 
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>To start your day</h3>
+                    <br />
 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ENYYb5vIMkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
+                <div className='videoInside'>
+                    <h3 style={{ textAlign: "center", color: " #157575" }}>When you feel depressed</h3>
+                    <br />
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xRxT9cOKiM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
 
 
             </div>

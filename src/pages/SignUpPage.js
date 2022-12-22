@@ -7,6 +7,9 @@ import { baseUrl } from "../service";
 const SignUpPage = () => {
 
     const navigate = useNavigate();
+    const [error, setError] = useState(null)
+
+
     const [state, setState] = useState({
         email: '',
         userName: '',
@@ -31,7 +34,7 @@ const SignUpPage = () => {
             console.log(axiosResponse)
             navigate('/login')
         })
-        .catch(err => console.log(err))
+        .catch(err => setError(err.response.data));
     }
 
 
@@ -56,6 +59,8 @@ const SignUpPage = () => {
             <input className="input" name="password" value={state.password} onChange={updateState} type="password" />
             <br/>
             <br />
+            <p style={{color: "red"}}>{error}</p>
+            <br/>
             <button className="button2"> Sign up</button>
 
             <Link to='/login'>

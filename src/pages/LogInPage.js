@@ -12,6 +12,8 @@ const LogInPage = () => {
 
     const navigate = useNavigate();
 
+    const [error, setError] = useState(null)
+
     const [state, setState] = useState({
         email: '',
         userName: '',
@@ -38,7 +40,7 @@ const LogInPage = () => {
             
 
         })
-        .catch(err => console.log(err))
+        .catch(err => setError(err.response.data));
     }
 
 
@@ -62,6 +64,7 @@ const LogInPage = () => {
                 <input className="input" name="password" value={state.password} onChange={updateState} type="password" />
                 <br />
                 <br />
+                <p style={{color: "red"}}>{error}</p>
                 <button className="button2"> Log In</button>
             </form>
         </div>

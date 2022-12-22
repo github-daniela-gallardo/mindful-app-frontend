@@ -105,7 +105,7 @@ const EditNoteModal = (props) => {
                             return (
                                 <div>
                                     <h4>{thisAnswer.question.text}</h4>
-                                    <textarea value={thisAnswer.answer} onChange={updateSingleNote(i)} ></textarea>
+                                    <textarea value={thisAnswer.answer} onChange={updateSingleNote(i)} cols="56"></textarea>
                                 </div>
 
                             )

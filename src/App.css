@@ -193,7 +193,7 @@ img.bg {
   width: fit-content;
   margin-top: 80px;
   margin-left: 40px;
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
 
@@ -343,8 +343,9 @@ img.bg {
 .notesModal textarea{
   background-color: unset;
   border-radius: 10px;
-  border: 1px solid #d6b0a7ad;
+  border: 1px solid rgb(74, 72, 73);
   padding: 10px;
+  
   
 }
 
@@ -451,5 +452,11 @@ img.bg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+
+}
+
+.videoInside:hover{
+box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+margin-bottom: 50px;
 }
 
