@@ -40,7 +40,7 @@ const HomeLoggedin = () => {
                 <div className='homeCardInside'>
 
                     <img className="meditateimg" src={meditateimg} alt='meditateimg' />
-                    <h4>Mediate now</h4>
+                    <h4>Meditate now</h4>
 
                 </div>
                 </Link>

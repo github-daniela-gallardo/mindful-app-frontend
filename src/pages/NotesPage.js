@@ -9,17 +9,6 @@ import { baseUrl } from "../service";
 
 const NotesPage = () => {
 
-    // const {userId} = useParams()
-
-    // const [isOpen, setIsOpen] = useState(false);
-    // const openModal = () => {
-    //   setIsOpen(true);
-    // }
-
-    // const closeModal = () => {
-    //   setIsOpen(false);
-    // }
-
     const [notes, setNotes] = useState([])
     const [isOpen, setIsOpen] = useState(false);
     const [noteId, setNoteId] = useState(null);
