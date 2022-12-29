@@ -59,13 +59,19 @@ const SignUpPage = () => {
             <input className="input" name="password" value={state.password} onChange={updateState} type="password" />
             <br/>
             <br />
+
             <p style={{color: "red"}}>{error}</p>
+
+            
             <br/>
             <button className="button2"> Sign up</button>
 
-            <Link to='/login'>
-            <h5>Already has an account? Log in Here!</h5>
-            </Link>
+            <br/>
+
+            <p style={{fontSize: "small"}}>Already has an account? 
+                <br/> 
+             <Link to='/login'> Log in Here!</Link></p>
+           
             </form>
         </div>
     );

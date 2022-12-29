@@ -1,9 +1,6 @@
 import NavBar from '../components/NavBar';
 import background from '../images/sign-up-log-in.png'
-import palosanto from '../images/palosantp.jpg'
-import dani from '../images/meditatedani.jpg'
-import meditateimg from '../images/meditate.jpg'
-import { Link } from 'react-router-dom';
+
 
 
 const Videos = () => {
